@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deepfake Detection Model
 
 ## Overview
@@ -41,3 +42,6 @@ This project detects deepfakes using a deep learning model trained on real and f
 ## Notes
 - **Model**: This project uses a simple CNN model and processes individual frames of videos.
 - **Frontend**: Basic HTML form to upload videos.
+=======
+# Deepfakedetection
+>>>>>>> e55cdd5bf47d8c78e0436c3dac924a30bbf9978d
