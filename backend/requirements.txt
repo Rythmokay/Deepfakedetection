@@ -1,0 +1,8 @@
+numpy
+pandas
+tensorflow
+keras
+opencv-python
+flask
+flask-cors
+pillow
