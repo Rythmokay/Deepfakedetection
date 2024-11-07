@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Detection</title>
+</head>
+<body>
+    <h1>Deepfake Detection</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" name="file" accept="video/*" required>
+        <button type="submit">Upload Video</button>
+    </form>
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('upload-form').onsubmit = async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            document.getElementById('result').textContent = "Result: " + result.result;
+        }
+    </script>
+</body>
+</html>
